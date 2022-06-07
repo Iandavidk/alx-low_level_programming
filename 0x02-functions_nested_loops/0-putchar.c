@@ -1,17 +1,17 @@
 #include "main.h"
 /**
- * main - Entry point
- * Return:0
- */
+*main - function prints text as output
+*
+*Return:return 0
+*/
 int main(void)
 {
-char c[10] = "_putchar";
-int i = 0;
-while (i < 9)
+char school[10] = "_putchar";
+int i;
+for (i = 0; i < 8; i++)
 {
-_putchar(c[i]);
-i++;
+_putchar(school[i]);
 }
-_putchar('\n');
+_putchar(10);
 return (0);
 }
