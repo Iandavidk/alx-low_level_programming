@@ -1,25 +1,31 @@
-#include "main.h"
-/**
-*print_square - prints squares
-*@size: parameter
-*Return:returns nothing
-*/
-void print_square(int size)
-{
-int inc1, inc2;
-if (size > 0)
-{
-for (inc1 = 0; inc1 < size; inc1++)
-{
-for (inc2 = 0; inc2 < (size - 1); inc2++)
-_putchar('#');
+#include <stdio.h>
 
-_putchar('#');
-_putchar('\n');
-}
-}
-else
+/**
+*main- prints the largest prime factor
+*of a number
+*
+*Return: returns 0
+*/
+
+int main(void)
 {
-_putchar('\n');
+long number = 612852475143;
+int inc;
+while (inc++ < number / 2)
+{
+if (number % inc == 0)
+{
+number /= 2;
+continue;
 }
+
+for (inc = 3; inc < number / 2; inc += 2)
+{
+if (number % inc == 0)
+number /= inc;
+
+}
+}
+printf("%ld\n", number);
+return (0);
 }
